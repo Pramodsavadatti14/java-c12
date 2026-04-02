@@ -41,7 +41,7 @@ pipeline {
                     withCredentials([usernamePassword(credentialsId: 'nexus-cred', passwordVariable: 'pass', usernameVariable: 'user')]) {
                         sh """
                         curl -u ${user}:${pass} -T java-frontend-app.war \
-                        "http://13.232.30.13:8081/repository/java-artifacts/java-frontend-app-${BUILD_NUMBER}.war"
+                        "http://3.108.191.252:8081/repository/myrepo/java-frontend-app-${BUILD_NUMBER}.war"
                         """
                     }
                 }
